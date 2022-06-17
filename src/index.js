@@ -8,12 +8,16 @@ import store from "./components/redux/store/store.js";
 //import store from './store/store';
 //import { Provider } from "react-redux";
 import Navbar from "./components/Header_comp/Navbar.jsx";
+import { Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Navbar />
-      <App />
+      <Container>
+        <App />
+      </Container>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

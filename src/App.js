@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Error from "./components/Error";
 import InclrementDecrement from "./components/Counter/InclrementDecrement.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import TODO_list from "./components/ToDos/TODO_list";
 
 function App() {
   //const counter = useSelector((state) => state.counter);
@@ -17,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/counter" element={<InclrementDecrement />} />
+          <Route path="/contacts-app" element={<TODO_list />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

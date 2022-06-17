@@ -1,11 +1,11 @@
 import React from "react";
-import { Nav, Container } from "react-bootstrap";
-
+import { Container } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
 const Navbar = () => {
   return (
     <>
       <Container>
-        <Nav className="justify-content-center bg-secondary">
+        <Nav fill variant="tabs" className="justify-content-center">
           <Nav.Item as="li">
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
@@ -14,7 +14,7 @@ const Navbar = () => {
           </Nav.Item>
 
           <Nav.Item as="li">
-            <Nav.Link href="/">Todo List</Nav.Link>
+            <Nav.Link href="/contacts-app">Todo List</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
             <Nav.Link href="/">Calculator</Nav.Link>
