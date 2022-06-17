@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+Fri Jun 17 2022 21:46:55 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/App.js
+* src/components/ToDos/ADD_Contacts.js
+* src/components/ToDos/TODO_list.js
+
+
+Created files:
+* .autogit/logs/log-17-5-2022-19-34-15.txt
+* .autogit/logs/log-17-5-2022-20-34-25.txt
+* .autogit/logs/log-17-5-2022-20-4-18.txt
+* src/components/ToDos/ADD_Contacts.js
+* src/components/redux/actions/ContactActions.js
+* src/components/redux/constants/contactConstants.js
+
+
+Deleted files:
+
+
+Renamed files:
