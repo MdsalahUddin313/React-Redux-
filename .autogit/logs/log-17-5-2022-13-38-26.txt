@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+Fri Jun 17 2022 13:38:26 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* package-lock.json
+* package.json
+* public/index.html
+* src/components/Header_comp/Navbar.jsx
+* src/components/Home.js
+
+
+Created files:
+* .autogit/logs/log-17-5-2022-11-34-53.txt
+* tailwind.config.js
+
+
+Deleted files:
+* src/components/redux/actions/tasksActions.js
+* src/components/redux/reducer/clockReducers.js
+
+
+Renamed files:
