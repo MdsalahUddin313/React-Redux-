@@ -43,18 +43,22 @@ const InclrementDecrement = () => {
       <Button
         className="button_padd"
         variant="outline-primary"
-        onClick={handleIncrement}
+        onClick={() => handleIncrement}
       >
         increment
       </Button>
       <Button
         className="button_padd"
         variant="outline-danger"
-        onClick={handleDecrement}
+        onClick={() => handleDecrement}
       >
         decrement
       </Button>
-      <Button className="button_padd" variant="success" onClick={handleReset}>
+      <Button
+        className="button_padd"
+        variant="success"
+        onClick={() => handleReset}
+      >
         Reset
       </Button>
     </div>
