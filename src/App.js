@@ -1,37 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import store from './store/store';
-import {incNumer,decNumer} from './actions/index';
-import  {useSelector,useDispatch} from 'react-redux';
-
+//import logo from "./logo.svg";
+import "./App.css";
+//import store from "./store/store";
+//import { incNumer, decNumer } from "./actions/index";
+//import { useSelector, useDispatch } from "react-redux";
+//import { useSelector } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Error from "./components/Error";
+import InclrementDecrement from "./components/Counter/InclrementDecrement.js";
 
 function App() {
-  const myState = useSelector ((state)=>state.changeTheNumer);
- const dispatch =useDispatch ();
+  //const counter = useSelector((state) => state.counter);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-            Hello react redux
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React and Redux
-        </a>
-        <div className="quantity">
-               <a className="quantity_minus" title="Decrement" onClick = {() => dispatch(decNumer())}><span> - </span></a>
-               <input name="quantity" type="text" className="quantity_input" value={myState}></input>
-                     
-               <a className="quantity_plus" title="Increment" onClick = {() => dispatch(incNumer())}><span> + </span></a>
-        </div>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/counter" element={<InclrementDecrement />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
 export default App;
+/*
+ <h1>Hello world</h1>
+      <p>Counter Application</p>
+      <p>{counter}</p>
+*/
