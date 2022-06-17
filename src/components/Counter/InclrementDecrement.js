@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { incremetCounter } from "./../redux/actions/counterActions";
+import {
+  incremetCounter,
+  decremetCounter,
+  resetCounter,
+} from "./../redux/actions/counterActions.js";
 /*
 1. Store Constant values
 2. Creating actions [increment ,decrement,resets]
@@ -12,18 +16,23 @@ const InclrementDecrement = () => {
   const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
   const handleIncrement = () => {
-    dispatch(incremetCounter);
+    dispatch(incremetCounter());
   };
-  console.log(count);
+  const handleDecrement = () => {
+    dispatch(decremetCounter());
+  };
+  const handleReset = () => {
+    dispatch(resetCounter());
+  };
   return (
     <div>
       <h1>Counter App</h1>
       <h4>
         <strong>Count::</strong> {count}
       </h4>
-      <button onclick={handleIncrement}>increment</button>
-      <button>decrement</button>
-      <button>Reset</button>
+      <button onClick={handleIncrement}>increment</button>
+      <button onClick={handleDecrement}>decrement</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 };

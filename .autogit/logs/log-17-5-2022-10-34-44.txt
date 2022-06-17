@@ -1,0 +1,34 @@
+-------------------- Auto-Git Log --------------------
+Fri Jun 17 2022 10:34:44 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .autogit/autogit.json
+* package-lock.json
+* package.json
+* src/App.js
+* src/index.js
+
+
+Created files:
+* src/components/Counter/InclrementDecrement.js
+* src/components/Error.js
+* src/components/Header_comp/Navbar.jsx
+* src/components/Home.js
+* src/components/index.js
+* src/components/redux/actions/counterActions.js
+* src/components/redux/actions/tasksActions.js
+* src/components/redux/constants/counterconstants.js
+* src/components/redux/reducer/CounterReducer.js
+* src/components/redux/reducer/clockReducers.js
+* src/components/redux/store/store.js
+
+
+Deleted files:
+* src/actions/index.js
+* src/reducers/index.js
+* src/reducers/upDown.js
+* src/store/store.js
+
+
+Renamed files:
