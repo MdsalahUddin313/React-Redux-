@@ -24,6 +24,7 @@ const InclrementDecrement = () => {
     backgroundRepeat: "no-repeat",
   };
   const count = useSelector((state) => state.count);
+  //console.log(count.count);
   const dispatch = useDispatch();
   const handleIncrement = () => {
     dispatch(incremetCounter());
@@ -38,27 +39,23 @@ const InclrementDecrement = () => {
     <div style={{ myStyle }} className="content_center">
       <h3 className="font_title">Counter App</h3>
       <h4>
-        <strong>Count::</strong> {count}
+        <strong>Count::</strong> {count.count}
       </h4>
       <Button
         className="button_padd"
         variant="outline-primary"
-        onClick={() => handleIncrement}
+        onClick={handleIncrement}
       >
         increment
       </Button>
       <Button
         className="button_padd"
         variant="outline-danger"
-        onClick={() => handleDecrement}
+        onClick={handleDecrement}
       >
         decrement
       </Button>
-      <Button
-        className="button_padd"
-        variant="success"
-        onClick={() => handleReset}
-      >
+      <Button className="button_padd" variant="success" onClick={handleReset}>
         Reset
       </Button>
     </div>
