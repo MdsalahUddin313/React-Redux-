@@ -1,8 +1,9 @@
 import { Button, Table } from "react-bootstrap";
 import React from "react";
+import { Link } from "react-router-dom";
 //import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
+import { deleteContacts } from "./ContactsSlice";
 const TODO_list = () => {
   const handleAddcontacts = (url) => {
     window.open(url);
@@ -11,7 +12,10 @@ const TODO_list = () => {
   // const cont_list_obj = Object.assign({}, contacts);
   // console.log(contacts);
   const dispatch = useDispatch();
-
+  const handleDelete = (id) => {
+    dispatch(deleteContacts(id));
+    console.log("Item Deleted");
+  };
   return (
     <div>
       <h4>Contact Book App</h4>
@@ -38,8 +42,8 @@ const TODO_list = () => {
         <tbody>
           {contacts &&
             contacts.map((e) => {
-              //const { id, title, name, contactNum, createdAt } = cont_list_obj;
-              //for (var i = 0; i <= contacts.length; i++) {
+              const { id, title, name, contactNum, createdAt } = e;
+
               return (
                 <tr key={e.id}>
                   <th>{e.id}</th>
@@ -49,8 +53,13 @@ const TODO_list = () => {
                   </th>
                   <th>{e.contactNum}</th>
                   <th>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <Link
+                      to="/edit-contacts-app"
+                      state={{ id, name, contactNum }}
+                    >
+                      <button>Edit</button>
+                    </Link>
+                    <button onClick={() => handleDelete(e.id)}>Delete</button>
                   </th>
                 </tr>
               );

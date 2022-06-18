@@ -1,26 +1,30 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
+import { useNavigate } from "react-router-dom";
+import { addContacts } from "./ContactsSlice";
 const ADD_Contacts = () => {
-  const [contactNames, setContactNames] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [name, setName] = useState("");
+  const [contactNum, setcontactNum] = useState("");
+  const navigate = useNavigate();
   const numberOfContacts = useSelector(
     (state) => state.contactsList.contacts.length
   );
   const dispatch = useDispatch();
   //console.log(numberOfContacts);
-  //console.log({ contactNames, phoneNumber });
+  //console.log({ name, contactNum });
   const handleSubmit = (e) => {
     e.preventDefault();
     const timestamp = new Date().getTime();
-    const timestamp_string = timestamp.toString();
+    const createdAt = timestamp.toString();
     const contactList = {
       id: numberOfContacts + 1,
-      contactNames,
-      phoneNumber,
-      timestamp_string,
+      name,
+      contactNum,
+      createdAt,
     };
+    dispatch(addContacts(contactList));
     console.log(contactList);
+    navigate("/contacts-app", { replace: true });
   };
   return (
     <div>
@@ -33,8 +37,8 @@ const ADD_Contacts = () => {
             id="name"
             placeholder="Enter Name"
             required
-            value={contactNames}
-            onChange={(e) => setContactNames(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           ></input>
           <br />
           <label htmlFor="phone-number">Mobile Number</label>
@@ -43,12 +47,13 @@ const ADD_Contacts = () => {
             id="phone-number"
             placeholder="Enter Mobile Number"
             required
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            value={contactNum}
+            onChange={(e) => setcontactNum(e.target.value)}
           ></input>
         </div>
+
+        <button type="submit">(+) Add Contact Number </button>
       </form>
-      <button type="submit">(+) Add Contact Number </button>
     </div>
   );
 };

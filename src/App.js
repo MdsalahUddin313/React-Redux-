@@ -11,6 +11,7 @@ import InclrementDecrement from "./components/Counter/InclrementDecrement.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TODO_list from "./components/ToDos/TODO_list";
 import ADD_Contacts from "./components/ToDos/ADD_Contacts";
+import Edit_Contacts from "./components/ToDos/Edit_Contacts";
 
 function App() {
   //const counter = useSelector((state) => state.counter);
@@ -22,7 +23,7 @@ function App() {
           <Route path="/counter" element={<InclrementDecrement />} />
           <Route path="/contacts-app" element={<TODO_list />} />
           <Route path="/add-contacts-app" element={<ADD_Contacts />} />
-
+          <Route path="/edit-contacts-app" element={<Edit_Contacts />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
