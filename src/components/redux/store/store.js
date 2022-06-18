@@ -6,7 +6,7 @@ import contactsReducer from "../../ToDos/ContactsSlice";
 
 const rootReducer = combineReducers({
   count: counterReducer,
-  contacts: contactsReducer,
+  contactsList: contactsReducer,
 });
 const store = createStore(rootReducer);
 

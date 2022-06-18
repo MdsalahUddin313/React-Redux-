@@ -9,7 +9,7 @@ const initialStateContacts = {
       createdAt: "2.5.2022 GMT 6:00",
     },
     {
-      id: 1,
+      id: 2,
       name: "Sanaullah",
       contactNum: "07896423",
       createdAt: "12.5.2022 GMT 9:00",
