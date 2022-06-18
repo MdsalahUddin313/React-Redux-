@@ -14,10 +14,10 @@ const Edit_Contacts = () => {
   const handleSubmit = () => {
     try {
       const updated_data = { id, name, contactNum, createdAt };
-      dispatch(updated_data());
+      dispatch(editContacts(updated_data));
       console.log("Edit Successfully!!!");
       navigator("/contacts-app", { replace: true });
-      console.log(updated_data);
+      // console.log(updated_data);
     } catch (e) {
       console.log(e);
     }

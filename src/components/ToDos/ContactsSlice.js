@@ -30,7 +30,16 @@ export const contactsSlice = createSlice({
       state.contacts = state.contacts.filter((contact) => contact.id !== id);
     },
     editContacts: (state, action) => {
-      state.contacts = state.contacts(action.payload);
+      const { id, name, contactNum, createdAt } = action.payload;
+      //state.contacts = state.contacts(action.payload);
+      const isContactsExist = state.contacts.filter(
+        (contact) => contact.id === id
+      );
+      if (isContactsExist) {
+        isContactsExist[0].name = name;
+        isContactsExist[0].contactNum = contactNum;
+        isContactsExist[0].createdAt = createdAt;
+      }
     },
   },
 });
