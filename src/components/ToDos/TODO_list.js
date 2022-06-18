@@ -42,7 +42,7 @@ const TODO_list = () => {
         <tbody>
           {contacts &&
             contacts.map((e) => {
-              const { id, title, name, contactNum, createdAt } = e;
+              const { id, name, contactNum, createdAt } = e;
 
               return (
                 <tr key={e.id}>
@@ -55,7 +55,7 @@ const TODO_list = () => {
                   <th>
                     <Link
                       to="/edit-contacts-app"
-                      state={{ id, name, contactNum }}
+                      state={{ id, name, contactNum, createdAt }}
                     >
                       <button>Edit</button>
                     </Link>

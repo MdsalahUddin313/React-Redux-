@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+Sat Jun 18 2022 11:50:04 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/App.js
+* src/components/ToDos/ADD_Contacts.js
+* src/components/ToDos/ContactsSlice.js
+* src/components/ToDos/Edit_Contacts.js
+* src/components/ToDos/TODO_list.js
+
+
+Created files:
+* .autogit/logs/log-18-5-2022-9-49-23.txt
+* src/components/ToDos/Edit_Contacts.js
+
+
+Deleted files:
+
+
+Renamed files:
