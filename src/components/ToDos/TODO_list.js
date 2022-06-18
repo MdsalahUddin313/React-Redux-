@@ -24,9 +24,7 @@ const TODO_list = () => {
       </p>
       <Button
         variant="outline-info"
-        onClick={() =>
-          handleAddcontacts("http://localhost:3000/add-contacts-app")
-        }
+        onClick={() => handleAddcontacts("/add-contacts-app")}
       >
         (+) Add Contacts
       </Button>
