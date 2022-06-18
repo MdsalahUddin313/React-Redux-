@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+Sat Jun 18 2022 07:48:54 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/components/ToDos/ContactsSlice.js
+* src/components/ToDos/TODO_list.js
+* src/components/redux/store/store.js
+
+
+Created files:
+* .autogit/logs/log-18-5-2022-6-48-40.txt
+
+
+Deleted files:
+
+
+Renamed files:
